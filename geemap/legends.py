@@ -113,7 +113,7 @@ builtin_legends = {
         '17 Water Bodies: at least 60% of area is covered by permanent water bodies.': '1c0dff'
     },
     # Oxford MAP: Malaria Atlas Project Fractional International Geosphere-Biosphere Programme Landcover https://developers.google.com/earth-engine/datasets/catalog/Oxford_MAP_IGBP_Fractional_Landcover_5km_Annual
-    'Oxford': {
+    'OXFORD': {
         '0 Water': '032f7e',
         '1 Evergreen_Needleleaf_Fores': '02740b',
         '2 Evergreen_Broadleaf_Forest': '02740b',
@@ -204,7 +204,7 @@ builtin_legends = {
         '230 Mixedwood': 'cc9900'
     },
     # Copernicus CORINE Land Cover https://developers.google.com/earth-engine/datasets/catalog/COPERNICUS_CORINE_V20_100m
-    'COPERNICUS/CORINE/V20/100m': {
+    'COPERNICUS/CORINE/V20/100M': {
         '111 Artificial surfaces > Urban fabric > Continuous urban fabric': 'E6004D',
         '112 Artificial surfaces > Urban fabric > Discontinuous urban fabric': 'FF0000',
         '121 Artificial surfaces > Industrial, commercial, and transport units > Industrial or commercial units': 'CC4DF2',
@@ -251,7 +251,7 @@ builtin_legends = {
         '523 Water bodies > Marine waters > Sea and ocean': 'E6F2FF'
     },
     # Copernicus Global Land Cover Layers: CGLS-LC100 collection 2 https://developers.google.com/earth-engine/datasets/catalog/COPERNICUS_Landcover_100m_Proba-V_Global
-    'COPERNICUS/Landcover/100m/Proba-V/Global': {
+    'COPERNICUS/LANDCOVER/100M/PROBA-V/GLOBAL': {
         '0 Unknown': '282828',
         '20 Shrubs. Woody perennial plants with persistent and woody stems and without any defined main stem being less than 5 m tall. The shrub foliage can be either evergreen or deciduous.': 'FFBB22',
         '30 Herbaceous vegetation. Plants without persistent stem or shoots above ground and lacking definite firm structure. Tree and shrub cover is less than 10 %.': 'FFFF4C',
@@ -415,10 +415,10 @@ builtin_legends = {
 
 def ee_table_to_legend(in_table, out_file):
     """Converts an Earth Engine color table to a dictionary
-    
+
     Args:
         in_table (str): The input file path (*.txt) to the Earth Engine color table.
-        out_file (str): The output file path (*.txt) to the legend dictionary. 
+        out_file (str): The output file path (*.txt) to the legend dictionary.
     """
     pkg_dir = os.path.dirname(
         pkg_resources.resource_filename("geemap", "geemap.py"))
@@ -454,8 +454,3 @@ def ee_table_to_legend(in_table, out_file):
 
     with open(out_file, 'w') as f:
         f.writelines(out_lines)
-
-    
-
-
-
